@@ -13,17 +13,17 @@
 	}
 	#viewportsize {
 		background: rgba(255, 0, 0, 0.4);
-	    bottom: 0;
-	    height: 28px;
-	    left: 0;
-	    margin: auto;
-	    padding: 3px 10px;
-	    position: fixed;
-	    right: 0;
-	    text-align: center;
-	    top: 0;
-	    width: 100px;
-	    z-index: 9999;
+		bottom: 0;
+		height: 28px;
+		left: 0;
+		margin: auto;
+		padding: 3px 10px;
+		position: fixed;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 100px;
+		z-index: 9999;
 	}
 	</style>
 </head>
@@ -32,19 +32,17 @@
 	<script>
 	$(document).ready(function (e) {
 		$('body').prepend('<div id="viewportsize"></div>');
-		getViewportSize();    
+		$('#viewportsize').html('Width: '+getViewportSize().height+'<br>Height: '+getViewportSize().width);   
 	});
+
 	$(window).resize(function (e) {
-		getViewportSize();
+		$('#viewportsize').html('Width: '+getViewportSize().height+'<br>Height: '+getViewportSize().width);  
 	});
+
 	function getViewportSize() {    
-		var width = $(window).width();
-		var height = $(window).height();
-		$('body').css({
-			'width': width,
-			'height': height
-		});
-		$('#viewportsize').html('Width: '+width+'<br>Height: '+height);
+		this.width = $(window).width();
+		this.height = $(window).height();
+		return(this);
 	}
 	</script>
 </body>
