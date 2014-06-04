@@ -1,0 +1,129 @@
+	body {
+		font-family: arial;
+		font-size: 12px;
+		margin: 0;
+		padding: 0 
+	}
+	.clear {
+		clear:both;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	.source {
+		position: static;
+		z-index: 1000;
+		top: 50px;
+		right: 50px;
+	}
+	pre code.python {
+		display: block;
+		padding: .2em;
+		background: #ffffff;
+		border-radius: 15px;
+	}
+	.container {
+		width: 640px;
+		margin: auto;
+	}
+	/******************* Desktop Menu *******************/
+	.vsMenu {
+		overflow: hidden;
+		background-color: #333;
+	}
+	.vsMenu li {
+		float: left;
+		margin-right: 40px;
+	}
+	.vsMenu li a {
+		color: #FFFFFF;
+		display: block;
+		padding: 10px 0;
+	}
+	.responsiveButton {
+		display: none;
+	}
+	@media (max-width: 767px) {
+		.container {
+			width: auto;
+			padding: 50px
+		}
+		/******************* Responsive Menu *******************/
+		.vsMenuBody {
+			position: absolute
+		}
+		.responsiveButton {
+			background: #0E0E0E;
+			display: block;
+			padding: 5px 15px;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+			position: absolute;
+			display: block;
+		}
+		.icon-bar {
+			background-color: #F5F5F5;
+			border-radius: 1px;
+			box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+			display: block;
+			height: 2px;
+			width: 18px;
+			-webkit-transform: rotate(0);
+			-ms-transform: rotate(0);
+			transform: rotate(0);
+			-webkit-transition: -webkit-transform 80ms ease-out;
+			transition: transform 80ms ease-out;
+			margin: 4px 0
+		}
+		.vsMenuOpen .icon-bar {
+			background: #000;
+		}
+		.vsMenuOpen .icon-bar:first-child, 
+		.vsMenuOpen .icon-bar:last-child {
+			background: #fff;
+			position: relative;
+			z-index: 1;
+		}
+		.vsMenuOpen .icon-bar:first-child {
+			top: 0.5em;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		.vsMenuOpen .icon-bar:last-child {
+			top: -0.5em;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		.vsMenu {
+			position: fixed;
+			top: 0;
+			height: 100%;
+			z-index: 999999;
+			width: 260px;
+			overflow-y: auto;
+			background: #F2F2F2;
+			color: #333;
+			left: -260px;
+			box-shadow: -12px 0 8px -8px rgba(0, 0, 0, 0.25) inset
+		}
+		.vsMenu li {
+			float: none;
+			margin-right: 0;
+		}
+		.vsMenu li a {
+			display:block;
+			padding: 10px;
+			color: #be2025;
+			text-decoration: none;
+			border-bottom:1px solid #58585a
+		}
+		.vsMenu li a:hover {
+			background: #58585a;
+			color: #ffffff
+		}
+	}

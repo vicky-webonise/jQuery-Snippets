@@ -33,11 +33,11 @@
 	
 	$(document).ready(function (e) {
 		$('body').prepend('<div id="viewportsize"></div>');
-		$('#viewportsize').html('Width: '+getViewportSize().height+'<br>Height: '+getViewportSize().width);   
+		$('#viewportsize').html('Width: '+getViewportSize().width+'<br>Height: '+getViewportSize().height);   
 	});
 
 	$(window).resize(function (e) {
-		$('#viewportsize').html('Width: '+getViewportSize().height+'<br>Height: '+getViewportSize().width);  
+		$('#viewportsize').html('Width: '+getViewportSize().width+'<br>Height: '+getViewportSize().height);  
 	});
 
 	function getViewportSize() {    
